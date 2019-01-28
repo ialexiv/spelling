@@ -19,7 +19,7 @@ public class App {
         if (CheckerService.isValidNumber(firstLine)) {
             nubmerOfCases = Integer.parseInt(firstLine);
         } else {
-            System.err.println("First argument must be number");
+            System.err.println("First argument must be number and in range from 1 to 100 (included)");
             System.exit(1);
         }
 

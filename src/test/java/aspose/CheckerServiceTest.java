@@ -12,6 +12,11 @@ public class CheckerServiceTest {
     public void isValidNumberTest() {
         assertTrue(CheckerService.isValidNumber("2"));
         assertFalse(CheckerService.isValidNumber("two"));
+        assertTrue(CheckerService.isValidNumber("1"));
+        assertTrue(CheckerService.isValidNumber("5"));
+        assertTrue(CheckerService.isValidNumber("100"));
+        assertFalse(CheckerService.isValidNumber("101"));
+        assertFalse(CheckerService.isValidNumber("-1"));
     }
 
     @Test

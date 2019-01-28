@@ -8,9 +8,13 @@ public class CheckerService {
     private static final String inputStringRegex = "[a-z\\s]+";
 
     public static boolean isValidNumber(String lineToCheck) {
+        Integer intValue;
         try {
-            Integer.parseInt(lineToCheck);
+            intValue = Integer.parseInt(lineToCheck);
         } catch (NumberFormatException e) {
+            return false;
+        }
+        if (intValue < 1 || intValue > 100) {
             return false;
         }
         return true;
